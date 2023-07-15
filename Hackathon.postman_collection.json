@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "ed6cf6a8-2999-4956-9171-e5b7b7bbf9ca",
+		"name": "Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "examinerRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1,\"subject\":\"Harry Potter\",\"topic\":[\"any\"],\"sectionsInRequest\":[{\"sectionName\":\"A\",\"questionType\":\"MCQ\",\"numberOfQuestions\":10,\"marks\":1.0},{\"sectionName\":\"B\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"numberOfQuestions\":8,\"marks\":5.0},{\"sectionName\":\"C\",\"questionType\":\"DESCRIPTIVE_LONG\",\"numberOfQuestions\":5,\"marks\":10.0}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/genExam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genExam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detailedExaminerRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1,\"subject\":\"Physics\",\"topic\":[\"Light\",\"Thermodynamics\",\"Electricity\"],\"detailedSectionRequest\":[{\"sectionName\":\"A\",\"questionList\":[{\"id\":\"1\",\"questionType\":\"MCQ\",\"marks\":1.0,\"difficulty\":\"EASY\"},{\"id\":\"2\",\"questionType\":\"MCQ\",\"marks\":1.0,\"difficulty\":\"EASY\"},{\"id\":\"3\",\"questionType\":\"MCQ\",\"marks\":1.0,\"difficulty\":\"MEDIUM\"},{\"id\":\"4\",\"questionType\":\"MCQ\",\"marks\":1.0,\"difficulty\":\"EASY\"},{\"id\":\"5\",\"questionType\":\"DESCRIPTIVE_SHORT\",\"marks\":2.0,\"difficulty\":\"EASY\"}]},{\"sectionName\":\"B\",\"questionList\":[{\"id\":\"1\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"marks\":4.0,\"difficulty\":\"EASY\"},{\"id\":\"2\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"marks\":6.0,\"difficulty\":\"HARD\"},{\"id\":\"3\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"marks\":5.0,\"difficulty\":\"MEDIUM\"},{\"id\":\"4\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"marks\":5.0,\"difficulty\":\"MEDIUM\"},{\"id\":\"5\",\"questionType\":\"DESCRIPTIVE_MEDIUM\",\"marks\":4.0,\"difficulty\":\"EASY\"}]},{\"sectionName\":\"C\",\"questionList\":[{\"id\":\"1\",\"questionType\":\"DESCRIPTIVE_LONG\",\"marks\":10.0,\"difficulty\":\"HARD\"},{\"id\":\"2\",\"questionType\":\"DESCRIPTIVE_LONG\",\"marks\":10.0,\"difficulty\":\"HARD\"}]}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/genExamDetailed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"genExamDetailed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
